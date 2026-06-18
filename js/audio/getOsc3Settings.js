@@ -4,7 +4,7 @@ export function getOsc3Settings() {
 
         wave:
             document.getElementById(
-                "osc2Wave"
+                "osc3Wave"
             ).value,
 
         attack:

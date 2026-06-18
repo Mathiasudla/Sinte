@@ -1,97 +1,63 @@
 // js/ui/piano.js
 
-import {
-    getCurrentOctave
-}
-from "./octaveManager.js";
+import { getCurrentOctave } from "./octaveManager.js";
 
 const NOTES = [
-    "C",
-    "C#",
-    "D",
-    "D#",
-    "E",
-    "F",
-    "F#",
-    "G",
-    "G#",
-    "A",
-    "A#",
-    "B"
+    "C", "C#", "D", "D#",
+    "E", "F", "F#", "G",
+    "G#", "A", "A#", "B"
 ];
 
-const BLACK_KEYS = [
-    1,3,6,8,10
-];
+const BLACK_KEYS = [1, 3, 6, 8, 10];
 
 export function createKeyboard() {
 
-    const keyboard =
-        document.getElementById(
-            "keyboard"
-        );
+    const keyboard = document.getElementById("keyboard");
 
-    if(!keyboard) return;
+    if (!keyboard) return;
 
     keyboard.innerHTML = "";
 
-    const startOct =
-        getCurrentOctave();
+    const startOctave = getCurrentOctave();
 
     let whiteIndex = 0;
 
-    for(
-        let octave = startOct;
-        octave < startOct + 2;
-        octave++
-    ){
+    for (let octave = startOctave; octave < startOctave + 2; octave++) {
 
-        NOTES.forEach(
-            (note,index) => {
+        NOTES.forEach((note, index) => {
 
-                const fullNote =
-                    `${note}${octave}`;
+            const fullNote = note + octave;
 
-                const isBlack =
-                    BLACK_KEYS.includes(
-                        index
-                    );
+            const isBlack = BLACK_KEYS.includes(index);
 
-                const key =
-                    document.createElement(
-                        "div"
-                    );
+            const key = document.createElement("div");
 
-                key.dataset.note =
-                    fullNote;
+            key.dataset.note = fullNote;
 
-                if(isBlack){
+            const label = document.createElement("span");
 
-                    key.classList.add(
-                        "black-key"
-                    );
+            label.textContent = fullNote;
 
-                    key.style.left =
-                        `${whiteIndex*60-20}px`;
+            key.appendChild(label);
 
-                }else{
+            if (isBlack) {
 
-                    key.classList.add(
-                        "white-key"
-                    );
+                key.classList.add("black-key");
 
-                    whiteIndex++;
+                key.style.left = (whiteIndex * 60 - 20) + "px";
 
-                }
+            } else {
 
-                key.innerHTML =
-                    `<span>${fullNote}</span>`;
+                key.classList.add("white-key");
 
-                keyboard.appendChild(
-                    key
-                );
+                whiteIndex++;
 
             }
-        );
+
+            keyboard.appendChild(key);
+
+        });
+
     }
+
 }
