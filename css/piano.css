@@ -1,0 +1,98 @@
+.piano-section{
+
+    background:var(--bg-panel);
+
+    padding:20px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+}
+
+.keyboard-options{
+
+    margin-bottom:20px;
+}
+
+.keyboard{
+
+    position:relative;
+
+    display:flex;
+
+    height:250px;
+
+    user-select:none;
+
+    overflow-x:auto;
+}
+
+/* TECLAS BLANCAS */
+
+.white-key{
+
+    width:60px;
+
+    height:250px;
+
+    background:white;
+
+    border:1px solid #999;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    padding-bottom:15px;
+
+    color:black;
+
+    font-weight:bold;
+}
+
+.white-key:active{
+
+    background:#d9d9d9;
+}
+
+/* TECLAS NEGRAS */
+
+.black-key{
+
+    position:absolute;
+
+    width:40px;
+
+    height:150px;
+
+    background:black;
+
+    border-radius:
+        0
+        0
+        8px
+        8px;
+
+    z-index:5;
+
+    cursor:pointer;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    padding-bottom:10px;
+}
+
+.black-key:active{
+
+    background:#333;
+}

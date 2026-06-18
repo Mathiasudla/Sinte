@@ -1,0 +1,177 @@
+<div class="oscillator-panel">
+
+    <h2>OSCILLATOR 3</h2>
+
+    <label>
+        <input type="checkbox" id="osc3Enable" checked>
+        Active
+    </label>
+
+    <div class="section-title">
+        Wave Generator
+    </div>
+
+    <div class="control-group">
+
+        <label>Waveform</label>
+
+        <select id="osc3Wave">
+            <option value="sine">Sine</option>
+            <option value="triangle">Triangle</option>
+            <option value="square">Square</option>
+            <option value="sawtooth">Saw</option>
+        </select>
+
+    </div>
+
+    <div class="control-group">
+
+        <label>Volume</label>
+
+        <input
+            type="range"
+            id="osc3Volume"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.8">
+
+    </div>
+
+    <div class="section-title">
+        ADSR Envelope
+    </div>
+
+    <div class="adsr-grid">
+
+        <div>
+            <label>Attack</label>
+            <input type="range" id="osc3Attack"
+                   min="0" max="5"
+                   step="0.01"
+                   value="0.1">
+        </div>
+
+        <div>
+            <label>Decay</label>
+            <input type="range" id="osc3Decay"
+                   min="0" max="5"
+                   step="0.01"
+                   value="0.3">
+        </div>
+
+        <div>
+            <label>Sustain</label>
+            <input type="range" id="osc3Sustain"
+                   min="0" max="1"
+                   step="0.01"
+                   value="0.7">
+        </div>
+
+        <div>
+            <label>Release</label>
+            <input type="range" id="osc3Release"
+                   min="0" max="5"
+                   step="0.01"
+                   value="0.5">
+        </div>
+
+    </div>
+
+    <div class="section-title">
+        Filter
+    </div>
+
+    <div class="control-group">
+
+        <label>Filter Type</label>
+
+        <select id="osc3FilterType">
+            <option value="lowpass">Low Pass</option>
+            <option value="highpass">High Pass</option>
+            <option value="bandpass">Band Pass</option>
+            <option value="notch">Notch</option>
+        </select>
+
+    </div>
+
+    <div class="control-group">
+
+        <label>Cutoff</label>
+
+        <input type="range"
+               id="osc3Cutoff"
+               min="20"
+               max="20000"
+               value="20000">
+
+    </div>
+
+    <div class="control-group">
+
+        <label>Resonance</label>
+
+        <input type="range"
+               id="osc3Q"
+               min="0"
+               max="30"
+               step="0.1"
+               value="1">
+
+    </div>
+
+    <div class="section-title">
+        LFO
+    </div>
+
+    <div class="control-group">
+
+        <label>LFO Wave</label>
+
+        <select id="osc3LFOWave">
+            <option value="sine">Sine</option>
+            <option value="triangle">Triangle</option>
+            <option value="square">Square</option>
+            <option value="sawtooth">Saw</option>
+        </select>
+
+    </div>
+
+    <div class="control-group">
+
+        <label>LFO Destination</label>
+
+        <select id="osc3LFOTarget">
+            <option value="pitch">Pitch</option>
+            <option value="gain">Volume</option>
+            <option value="filter">Filter</option>
+        </select>
+
+    </div>
+
+    <div class="control-group">
+
+        <label>Rate</label>
+
+        <input type="range"
+               id="osc3LFORate"
+               min="0.1"
+               max="20"
+               step="0.1"
+               value="5">
+
+    </div>
+
+    <div class="control-group">
+
+        <label>Depth</label>
+
+        <input type="range"
+               id="osc3LFODepth"
+               min="0"
+               max="100"
+               value="0">
+
+    </div>
+
+</div>

@@ -1,0 +1,21 @@
+:root {
+
+    --bg-main: #0b1020;
+    --bg-panel: #151c33;
+    --bg-panel-dark: #0f172a;
+
+    --primary: #00e5ff;
+    --secondary: #8b5cf6;
+
+    --text: #ffffff;
+    --text-muted: #a0aec0;
+
+    --border: rgba(255,255,255,.1);
+
+    --shadow:
+        0 0 10px rgba(0,229,255,.25),
+        0 0 20px rgba(139,92,246,.15);
+
+    --radius: 18px;
+
+}

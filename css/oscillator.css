@@ -1,0 +1,179 @@
+.oscillator-panel {
+
+    background: var(--bg-panel);
+
+    border-radius: var(--radius);
+
+    padding: 20px;
+
+    box-shadow: var(--shadow);
+
+    border: 1px solid var(--border);
+
+    transition: .25s;
+}
+
+.oscillator-panel:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(0,229,255,.25),
+        0 0 40px rgba(139,92,246,.25);
+}
+
+.oscillator-panel h2 {
+
+    color: var(--primary);
+
+    margin-bottom: 15px;
+}
+
+.section-title {
+
+    margin-top: 20px;
+
+    margin-bottom: 10px;
+
+    font-weight: 700;
+
+    color: var(--secondary);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.control-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+.adsr-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.adsr-grid div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+select {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1f2a48;
+
+    color: white;
+
+    outline: none;
+}
+
+input[type="checkbox"] {
+
+    transform: scale(1.2);
+
+    margin-right: 8px;
+}
+
+/* ========================= */
+/* SLIDERS NEÓN             */
+/* ========================= */
+
+input[type="range"] {
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 100%;
+
+    height: 8px;
+
+    border-radius: 10px;
+
+    background: #1d2947;
+
+    cursor: pointer;
+}
+
+/* Chrome / Edge / Opera */
+
+input[type="range"]::-webkit-slider-thumb {
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px var(--primary),
+        0 0 20px var(--primary);
+}
+
+/* Firefox */
+
+input[type="range"]::-moz-range-thumb {
+
+    width: 18px;
+
+    height: 18px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px var(--primary),
+        0 0 20px var(--primary);
+}
+
+/* Track Firefox */
+
+input[type="range"]::-moz-range-track {
+
+    height: 8px;
+
+    border-radius: 10px;
+
+    background: #1d2947;
+}
+
+label {
+
+    color: var(--text);
+
+    font-size: 0.9rem;
+}

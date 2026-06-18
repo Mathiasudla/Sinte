@@ -1,0 +1,61 @@
+<section class="master-panel">
+
+    <h2>MASTER</h2>
+
+    <div class="master-grid">
+
+        <div>
+
+            <label>
+                Master Volume
+            </label>
+
+            <input
+                type="range"
+                id="masterVolume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.8"
+            >
+
+        </div>
+
+        <div>
+
+            <label>
+                Master Tune
+            </label>
+
+            <input
+                type="range"
+                id="masterTune"
+                min="-12"
+                max="12"
+                value="0"
+            >
+
+        </div>
+
+    </div>
+
+    <h3>VU Meter</h3>
+
+    <div class="vu-meter">
+
+        <div
+            id="vuFill"
+            class="vu-fill">
+        </div>
+
+    </div>
+
+    <h3>Oscilloscope</h3>
+
+    <canvas
+        id="oscilloscope"
+        width="900"
+        height="200">
+    </canvas>
+
+</section>

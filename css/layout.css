@@ -1,0 +1,114 @@
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 30px;
+
+    background:var(--bg-panel);
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+}
+
+.logo{
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    letter-spacing:2px;
+}
+
+.global-controls{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.global-controls button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:var(--secondary);
+
+    font-size:1.2rem;
+}
+
+#octaveDisplay{
+
+    min-width:80px;
+
+    text-align:center;
+
+    font-weight:bold;
+}
+
+main{
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.oscillator-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(350px,1fr)
+        );
+
+    gap:20px;
+}
+
+.master-panel{
+
+    background:var(--bg-panel);
+
+    border-radius:var(--radius);
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+}
+
+.master-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px,1fr)
+        );
+
+    gap:20px;
+
+    margin-bottom:20px;
+}
